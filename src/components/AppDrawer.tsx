@@ -11,9 +11,7 @@ import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import { makeStyles, useTheme } from "@material-ui/core";
 import TextField from '@material-ui/core/TextField';
 
-
 const drawerWidth = 240;
-
 const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex'
@@ -58,23 +56,6 @@ const useStyles = makeStyles((theme) => ({
     ...theme.mixins.toolbar,
     justifyContent: 'flex-end',
   },
-  content: {
-    flexGrow: 1,
-    padding: theme.spacing(3),
-    transition: theme.transitions.create('margin', {
-      easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.leavingScreen,
-    }),
-    marginLeft: -drawerWidth,
-  },
-  contentShift: {
-    transition: theme.transitions.create('margin', {
-      easing: theme.transitions.easing.easeOut,
-      duration: theme.transitions.duration.enteringScreen,
-    }),
-    marginLeft: 0,
-  },
-
 }));
 
 type AppDrawerProps = {
@@ -86,7 +67,15 @@ type AppDrawerProps = {
   onSearchChange?: (searchString: string) => void
 };
 
-export const AppDrawer = ({children, isOpen, onMenuClick, onChevronClick, appBarTitle, onSearchChange}: AppDrawerProps) => {
+export const AppDrawer = (
+  {
+    children,
+    isOpen,
+    onMenuClick,
+    onChevronClick,
+    appBarTitle,
+    onSearchChange
+  }: AppDrawerProps) => {
   const classes = useStyles();
   const theme = useTheme();
 

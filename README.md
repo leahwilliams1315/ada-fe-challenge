@@ -18,7 +18,7 @@ help keep the payload from the server small.
 One potential user experience challenge I could see is if there were thousands of text elements 
 to render. Aside from the server response time for such a large payload, users would have an 
 incredibly long list to navigate through. A lazy loading solution to incrementally load data
-as the user scroll might be a good solution. 
+as the user scrolls might be a good solution. 
 
 ### How would you make this accessible?
 One thing to do to ensure the application is accessible, is to consider the tab flow of elements, 
@@ -29,7 +29,7 @@ accessibility tools to deliver content to the user is important.
 ### What would you change if you had more time to work on it?
 I had some challenges with rendering all the nested connections in the drawer. If
   I had more time to continue working on this challenge, I would like to have found an elegant 
-  solution using recursion to render a nodes connections, as well as all of those connections 
+  solution using recursion to render a nodes connections, as well as all of those connections' 
   children. As I mentioned in my answer about the appropriateness of my solution, ideally I would 
   love to have been able to implement redux as well. However, I did get a chance to show off my
   experience using react hooks for state management. I would also like to have moved
